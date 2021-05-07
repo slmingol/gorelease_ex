@@ -3,4 +3,4 @@ dryrun:
 build:
 	goreleaser build
 release:
-	goreleaser release --skip-publish
+	goreleaser release #--skip-publish
