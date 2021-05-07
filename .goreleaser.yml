@@ -12,14 +12,13 @@ builds:
       - CGO_ENABLED=0
     goos:
       - linux
-      - windows
       - darwin
+    goarch:
+      - amd64
 archives:
   - replacements:
       darwin: Darwin
       linux: Linux
-      windows: Windows
-      386: i386
       amd64: x86_64
 checksum:
   name_template: 'checksums.txt'
@@ -31,3 +30,11 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
+dockers:
+  - binaries:
+    - main
+  - image_templates:
+    - "slmingol/{{ .ProjectName }}:{{ .Tag }}"
+    - "slmingol/{{ .ProjectName }}:v{{ .Major }}"
+    - "slmingol/{{ .ProjectName }}:v{{ .Major }}.{{ .Minor }}"
+    - "slmingol/{{ .ProjectName }}:latest"
