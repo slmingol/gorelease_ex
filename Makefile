@@ -3,6 +3,6 @@ dryrun:
 build:
 	goreleaser build --rm-dist
 tag:
-	./version-up.sh --patch
+	./version-up.sh --patch --apply
 release:
 	goreleaser release #--skip-publish
