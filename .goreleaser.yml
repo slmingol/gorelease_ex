@@ -40,6 +40,6 @@ dockers:
       - "--label=org.opencontainers.image.revision={{ .FullCommit }}"
       - "--label=org.opencontainers.image.source={{ .GitURL }}"
       - "--label=org.opencontainers.image.title={{ .ProjectName }}"
-      - "--label=org.opencontainers.image.url={{ .GitUrl }}"
+      - "--label=org.opencontainers.image.url={{ .GitURL }}"
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--platform=linux/amd64"
