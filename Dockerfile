@@ -1,3 +1,3 @@
 FROM scratch
-ENTRYPOINT ["/main1"]
-COPY main1 /
+COPY main1 /usr/bin/main1
+ENTRYPOINT ["/usr/bin/main1"]
