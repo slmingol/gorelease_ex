@@ -1,3 +1,5 @@
+# REF: https://github.com/goreleaser/example/blob/master/.goreleaser.yaml
+
 project_name: gorelease_ex
 before:
   hooks:
