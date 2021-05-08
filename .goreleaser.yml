@@ -31,14 +31,15 @@ changelog:
       - '^docs:'
       - '^test:'
 dockers:
-  - image_templates: ["ghcr.io/slmingol/gorelease_ex:{{ .Version }}"]
+  - image_templates: 
+    - "ghcr.io/slmingol/gorelease_ex:{{ .Tag }}"
+    - "slmingol/gorelease_ex:{{ .Tag }}"
     dockerfile: Dockerfile
     build_flag_templates:
-    - --label=org.opencontainers.image.title={{ .ProjectName }}
-    - --label=org.opencontainers.image.description={{ .ProjectName }}
-    - --label=org.opencontainers.image.url=https://github.com/gorelease_ex
-    - --label=org.opencontainers.image.source=https://github.com/gorelease_ex
-    - --label=org.opencontainers.image.version={{ .Version }}
-    - --label=org.opencontainers.image.created={{ time "2006-01-02T15:04:05Z07:00" }}
-    - --label=org.opencontainers.image.revision={{ .FullCommit }}
-    - --label=org.opencontainers.image.licenses=MIT
+      - "--pull"
+      - "--label=org.opencontainers.image.created={{.Date}}"
+      - "--label=org.opencontainers.image.name={{.ProjectName}}"
+      - "--label=org.opencontainers.image.revision={{.FullCommit}}"
+      - "--label=org.opencontainers.image.version={{.Version}}"
+      - "--label=org.opencontainers.image.source={{.GitURL}}"
+      - "--platform=linux/amd64"
