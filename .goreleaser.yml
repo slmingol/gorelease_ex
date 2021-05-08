@@ -1,6 +1,6 @@
 # This is an example .goreleaser.yml file with some sane defaults.
 # Make sure to check the documentation at http://goreleaser.com
-project_name: myproject
+project_name: goreleaser_ex
 before:
   hooks:
     # You may remove this if you don't use go modules.
@@ -33,9 +33,8 @@ changelog:
 dockers:
   - binaries:
     - main1
-    - main2
   - image_templates:
-    - "slmingol/{{ .ProjectName }}:{{ .Tag }}"
-    - "slmingol/{{ .ProjectName }}:v{{ .Major }}"
-    - "slmingol/{{ .ProjectName }}:v{{ .Major }}.{{ .Minor }}"
-    - "slmingol/{{ .ProjectName }}:latest"
+    - "ghcr.io/slmingol/{{ .ProjectName }}:{{ .Tag }}"
+    - "ghcr.io/slmingol/{{ .ProjectName }}:v{{ .Major }}"
+    - "ghcr.io/slmingol/{{ .ProjectName }}:v{{ .Major }}.{{ .Minor }}"
+    - "ghcr.io/slmingol/{{ .ProjectName }}:latest"
