@@ -30,6 +30,7 @@ changelog:
 dockers:
   - image_templates: 
     - "ghcr.io/slmingol/gorelease_ex:{{ .Tag }}"
+    - "slmingol/gorelease_ex:{{ .Tag }}"
     dockerfile: Dockerfile
     build_flag_templates:
       - "--pull"
