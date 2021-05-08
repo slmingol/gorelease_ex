@@ -32,7 +32,8 @@ changelog:
       - '^test:'
 dockers:
   - binaries:
-    - main
+    - main1
+    - main2
   - image_templates:
     - "slmingol/{{ .ProjectName }}:{{ .Tag }}"
     - "slmingol/{{ .ProjectName }}:v{{ .Major }}"
