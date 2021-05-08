@@ -1,3 +1,3 @@
 FROM scratch
-COPY main1 /usr/bin/main1
-ENTRYPOINT ["/usr/bin/main1"]
+COPY gorelease_ex /usr/bin/gorelease_ex
+ENTRYPOINT ["/usr/bin/gorelease_ex"]
