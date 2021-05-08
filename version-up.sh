@@ -373,6 +373,8 @@ if [[ "$DO_APPLY" == "1" ]]; then
 
     # confirm that tag applied
     git --no-pager log --pretty=format:"%h%x09%Cblue%cr%Cgreen%x09%an%Creset%x09%s%Cred%d%Creset" -n 2 --date=short | nl -w2 -s"  "
+    echo ''
+    echo ''
 fi
 
 #
