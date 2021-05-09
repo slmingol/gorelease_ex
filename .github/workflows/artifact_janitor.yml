@@ -40,7 +40,7 @@ jobs:
         uses: m3ntorship/action-dockerhub-cleanup@1.2
         with:
           token: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
-          user: ${{ github.repository_owner }}
+          user: 'slmingol'
           repos: '["gorelease_ex"]'
           keep-last: 3 
           force-full-cleanup: true
