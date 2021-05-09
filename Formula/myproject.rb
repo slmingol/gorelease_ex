@@ -6,17 +6,17 @@ require_relative "custom_download_strategy"
 class Myproject < Formula
   desc "Software to create fast and easy drum rolls."
   homepage ""
-  version "0.0.46"
+  version "0.0.47"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/slmingol/gorelease_ex/releases/download/0.0.46/gorelease_ex_0.0.46_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "4d0150bb1c17c3ace3688e3d2da38a79f56e545f77f1f46c94ffa3ffae1fb2b2"
+    url "https://github.com/slmingol/gorelease_ex/releases/download/0.0.47/gorelease_ex_0.0.47_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy.
+    sha256 "d3b3982dff477b50f472e3cd66ca8bee428444ad668aa64802b6a889e700bdd3"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/slmingol/gorelease_ex/releases/download/0.0.46/gorelease_ex_0.0.46_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "961889fee02fe5444581007bf3381e1af913c8d847bc25efd70aacef92407acb"
+    url "https://github.com/slmingol/gorelease_ex/releases/download/0.0.47/gorelease_ex_0.0.47_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy.
+    sha256 "ea20a81b85135570306f16844c16c1e33713e1eda3a1c26288a1ee9176298138"
   end
 
   def install
