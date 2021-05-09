@@ -43,6 +43,7 @@ jobs:
 ##           user: ${{ github.repository_owner }} # same on both GH + dockerhub
 ##           repos: '["gorelease_ex"]'
 ##           keep-last: 3 
-##           #force-full-cleanup: true
+##            #substrings: '["0.0."]'
+##            #force-full-cleanup: true
 
 #---------------------------------------------------------------------------
