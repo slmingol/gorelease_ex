@@ -1,11 +1,33 @@
 name: Release Go project
 
+#---------------------------------------------------------------------------
+
 on:
   push:
     tags:
-      - "*" # triggers only if push new tag version, like `0.8.4` or else
+      - "*"
+
+#---------------------------------------------------------------------------
 
 jobs:
+  package-cleanup:
+    name: Clean up old package versionsdd
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clean up old package versions
+        id: clean-up-old-package-versions
+        uses: stripethree/gpr-janitor@dist
+        with:
+          dry-run: true
+          keep-versions: 3
+          min-age-days: 30
+          # packages-to-fetch: 1 - (default)
+          versions-to-fetch: 10
+        env:
+          GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
+
+#---------------------------------------------------------------------------
+  
   build:
     name: GoReleaser build
     runs-on: ubuntu-latest
@@ -42,3 +64,5 @@ jobs:
           args: release --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
+
+#---------------------------------------------------------------------------
