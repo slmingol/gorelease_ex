@@ -27,6 +27,7 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
+
 dockers:
   - image_templates: 
     - "ghcr.io/slmingol/gorelease_ex:{{ .Tag }}"
@@ -45,30 +46,30 @@ dockers:
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--platform=linux/amd64"
 
-#brews:
-#  -
-#    # Name template of the recipe
-#    # Default to project name
-#    name: myproject
-#
-#    # IDs of the archives to use.
-#    # Defaults to all.
-#    #ids:
-#    #- foo
-#    #- bar
-#
-#    # GOARM to specify which 32-bit arm version to use if there are multiple versions
-#    # from the build section. Brew formulas support atm only one 32-bit version.
-#    # Default is 6 for all artifacts or each id if there a multiple versions.
-#    #goarm: 6
-#
-#    # NOTE: make sure the url_template, the token and given repo (github or gitlab) owner and name are from the
-#    # same kind. We will probably unify this in the next major version like it is done with scoop.
-#
-#    # GitHub/GitLab repository to push the formula to
-#    # Gitea is not supported yet, but the support coming
-#    tap:
-#      owner: slmingol
-#      name: homebrew-tap
-#      # Optionally a token can be provided, if it differs from the token provided to GoReleaser
-#      token: "{{ .Env.GO_RELEASER_HOMEBREW_TOKEN }}"
+brews:
+  -
+    # Name template of the recipe
+    # Default to project name
+    name: myproject
+
+    # IDs of the archives to use.
+    # Defaults to all.
+    #ids:
+    #- foo
+    #- bar
+
+    # GOARM to specify which 32-bit arm version to use if there are multiple versions
+    # from the build section. Brew formulas support atm only one 32-bit version.
+    # Default is 6 for all artifacts or each id if there a multiple versions.
+    #goarm: 6
+
+    # NOTE: make sure the url_template, the token and given repo (github or gitlab) owner and name are from the
+    # same kind. We will probably unify this in the next major version like it is done with scoop.
+
+    # GitHub/GitLab repository to push the formula to
+    # Gitea is not supported yet, but the support coming
+    tap:
+      owner: slmingol
+      name: gorelease_ex
+      # Optionally a token can be provided, if it differs from the token provided to GoReleaser
+      #token: "{{ .Env.GO_RELEASER_GITHUB_TOKEN }}"
