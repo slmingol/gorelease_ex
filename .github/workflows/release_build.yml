@@ -20,7 +20,7 @@ jobs:
         with:
           dry-run: false
           keep-versions: 3
-          min-age-days: 30
+          min-age-days: 0
           # packages-to-fetch: 1 - (default)
           versions-to-fetch: 10
         env:
