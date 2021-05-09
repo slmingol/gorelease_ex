@@ -1,5 +1,6 @@
 export GITHUB_TOKEN = ${GO_RELEASER_GITHUB_TOKEN}
 
+
 dryrun:
 	goreleaser --snapshot --skip-publish --rm-dist --debug
 build:
