@@ -8,25 +8,6 @@ on:
       - "*"
 
 #---------------------------------------------------------------------------
-
-jobs:
-  package-cleanup:
-    name: Clean up old package versions
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clean up old package versions
-        id: clean-up-old-package-versions
-        uses: stripethree/gpr-janitor@dist
-        with:
-          dry-run: false
-          keep-versions: 3
-          min-age-days: 0
-          # packages-to-fetch: 1 - (default)
-          versions-to-fetch: 10
-        env:
-          GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
-
-#---------------------------------------------------------------------------
   
   build:
     name: GoReleaser build
