@@ -11,7 +11,7 @@ on:
 
 jobs:
   package-cleanup:
-    name: Clean up old package versionsdd
+    name: Clean up old package versions
     runs-on: ubuntu-latest
     steps:
       - name: Clean up old package versions
