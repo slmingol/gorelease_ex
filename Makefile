@@ -1,4 +1,3 @@
-export GO_RELEASER_HOMEBREW_TOKEN = ${HOMEBREW_GITHUB_API_TOKEN}
 export GITHUB_TOKEN = ${GO_RELEASER_GITHUB_TOKEN}
 
 dryrun:
@@ -12,5 +11,4 @@ release:
 
 
 ### Useful for debugging ###
-
 #goreleaser release --skip-validate --rm-dist --debug #--skip-publish
