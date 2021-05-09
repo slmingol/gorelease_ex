@@ -35,8 +35,14 @@ jobs:
   cleanup_dockerhub_tags:
     runs-on: ubuntu-latest
     steps:
-      - id: delete_old_tags
-        name: Delete old dockerhub image tags
+      - name: Docker Login (dockerhub)
+        uses: docker/login-action@v1
+        with:
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
+
+      - name: Delete old dockerhub image tags
+        id: delete_old_tags
         uses: m3ntorship/action-dockerhub-cleanup@1.2
         with:
           token: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
