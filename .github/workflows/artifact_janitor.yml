@@ -35,7 +35,7 @@ jobs:
         uses: dev-drprasad/delete-older-releases@v0.2.0
         with:
           repo: ${{ github.repository_owner }}/gorelease_ex
-          keep_latest: 3
+          keep_latest: 1
           delete_tags: true
           delete_tag_pattern: 0.
         env:
