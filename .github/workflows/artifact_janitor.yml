@@ -31,52 +31,54 @@ jobs:
 
 #---------------------------------------------------------------------------
 
-##   cleanup_dockerhub_tags:
-##     runs-on: ubuntu-latest
-##     steps:
-##       - name: Delete old dockerhub image tags
-##         id: delete_old_tags
-##         uses: m3ntorship/action-dockerhub-cleanup@1.2
-##         with:
-##           token: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
-##           user: ${{ github.repository_owner }} # same on both GH + dockerhub
-##           repos: '["gorelease_ex"]'
-##           keep-last: 3 
-##            #substrings: '["0.0."]'
-##            #force-full-cleanup: true
-
-#---------------------------------------------------------------------------
-
   cleanup_dockerhub_tags:
     runs-on: ubuntu-latest
     steps:
-      - id: delete_old_tags
-        name: Delete old docker image tags
+      - name: Delete old dockerhub image tags
+        id: delete_old_tags
         uses: m3ntorship/action-dockerhub-cleanup@1.2
         with:
           token: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
           user: ${{ github.repository_owner }} # same on both GH + dockerhub
-
-          # because we are building and pushing two docker images
-          # per workflow run, we also delete the tags from these two repos
-          #repos: '["pickly-frontend","pickly-storybook"]'
-
-          # because in this workflow, we produce two temp docker images (frontend and storybook)
-          # to be deployed for the lifetime of a PR, when we clean up, we are deleting all tags
-          # produced by all pushes to that particular PR, so here we specify three arguments to the
-          # action (keep-last, force-full-cleanup, and substrings), the combination of these three
-          # paramaters makes it delete all the temporarly created images
-          #
-          #keep-last: 3
-          keep-last: 3
+          repos: '["gorelease_ex"]'
+          keep-last: 3 
+           #substrings: '["0.0."]'
           force-full-cleanup: true
 
-          # we are deleting all docker tags which start with the
-          # version prefix for example, the version above is constructed
-          # by concatinating the string `pr`, `pr_number` and `pr_run_number`
-          # 'pr-${{ github.event.number }}-${{ github.run_number}}'
-          # means the tags will be be `pr-82-1`, `pr-82-20` .. and so on
-          # so here we are deleting any tag that contains  `pr-82` in its name
-          #
-          #substrings: '["pr-${{ github.event.number }}"]'
-          substrings: '["0.*"]'
+#---------------------------------------------------------------------------
+
+#  cleanup_dockerhub_tags:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - id: delete_old_tags
+#        name: Delete old docker image tags
+#        uses: m3ntorship/action-dockerhub-cleanup@1.2
+#        with:
+#          token: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
+#          user: ${{ github.repository_owner }} # same on both GH + dockerhub
+#
+#          # because we are building and pushing two docker images
+#          # per workflow run, we also delete the tags from these two repos
+#          #repos: '["pickly-frontend","pickly-storybook"]'
+#
+#          # because in this workflow, we produce two temp docker images (frontend and storybook)
+#          # to be deployed for the lifetime of a PR, when we clean up, we are deleting all tags
+#          # produced by all pushes to that particular PR, so here we specify three arguments to the
+#          # action (keep-last, force-full-cleanup, and substrings), the combination of these three
+#          # paramaters makes it delete all the temporarly created images
+#          #
+#          #keep-last: 3
+#          keep-last: 3
+#          force-full-cleanup: true
+#
+#          # we are deleting all docker tags which start with the
+#          # version prefix for example, the version above is constructed
+#          # by concatinating the string `pr`, `pr_number` and `pr_run_number`
+#          # 'pr-${{ github.event.number }}-${{ github.run_number}}'
+#          # means the tags will be be `pr-82-1`, `pr-82-20` .. and so on
+#          # so here we are deleting any tag that contains  `pr-82` in its name
+#          #
+#          #substrings: '["pr-${{ github.event.number }}"]'
+#          substrings: '["0."]'
+
+#---------------------------------------------------------------------------
