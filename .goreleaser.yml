@@ -59,6 +59,7 @@ brews:
       email: goreleaser@lamolabs.org
     dependencies:
       - name: go
+      - name: coreutils
     test: |
       system "#{bin}/gorelease_ex"
     install: |
