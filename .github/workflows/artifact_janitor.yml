@@ -18,24 +18,12 @@ jobs:
   package-cleanup:
     runs-on: ubuntu-latest
     steps:
-#       - name: Clean up old versions (gpr-janitor)
-#         id: clean-up-old-package-versions__gpr-janitor
-#         uses: stripethree/gpr-janitor@v2
-#         with:
-#           dry-run: false
-#           keep-versions: 3
-#           min-age-days: 1
-#           # packages-to-fetch: 1 - (default)
-#           versions-to-fetch: 10
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
-
-      - name: Clean up old versions (delete-older-releases)
-        id: clean-up-old-package-versions__delete-older-releases
+      - name: Clean up old versions
+        id: clean-up-old-package-versions
         uses: dev-drprasad/delete-older-releases@v0.2.0
         with:
           repo: ${{ github.repository_owner }}/gorelease_ex
-          keep_latest: 1
+          keep_latest: 2
           delete_tags: true
           delete_tag_pattern: 0.
         env:
