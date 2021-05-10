@@ -31,18 +31,18 @@ jobs:
 
 #---------------------------------------------------------------------------
 
-#  cleanup_dockerhub_tags:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Delete old dockerhub image tags
-#        id: delete_old_tags
-#        uses: m3ntorship/action-dockerhub-cleanup@1.2
-#        with:
-#          token: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
-#          user: 'slmingol'
-#          keep-last: 3 
-#          force-full-cleanup: true
-#
+  cleanup_dockerhub_tags:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete old dockerhub image tags
+        id: delete_old_tags
+        uses: m3ntorship/action-dockerhub-cleanup@1.2
+        with:
+          token: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
+          user: 'slmingol'
+          keep-last: 3 
+          force-full-cleanup: true
+
            #substrings: '["0.0."]'
             #repos: '["gorelease_ex"]'
             #user: 'slmingol'   #${{ github.repository_owner }} # same on both GH + dockerhub
