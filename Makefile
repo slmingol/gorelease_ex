@@ -6,7 +6,7 @@ dryrun:
 build:
 	goreleaser build --rm-dist --debug
 tag:
-	./version-up.sh --patch --apply
+	scripts/version-up.sh --patch --apply
 release:
 	goreleaser release --rm-dist
 
