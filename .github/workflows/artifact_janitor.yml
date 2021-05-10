@@ -42,9 +42,9 @@ jobs:
           user: 'slmingol'
           keep-last: 3 
           force-full-cleanup: true
+          repos: '["gorelease_ex"]'
 
            #substrings: '["0.0."]'
-            #repos: '["gorelease_ex"]'
             #user: 'slmingol'   #${{ github.repository_owner }} # same on both GH + dockerhub
 
 #---------------------------------------------------------------------------
