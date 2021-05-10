@@ -38,11 +38,11 @@ jobs:
         id: delete_old_tags
         uses: m3ntorship/action-dockerhub-cleanup@1.2
         with:
-          token: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
+          repos: '["gorelease_ex"]'
           user: 'slmingol'
           keep-last: 3 
           force-full-cleanup: true
-          repos: '["gorelease_ex"]'
+          token: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
 
            #substrings: '["0.0."]'
             #user: 'slmingol'   #${{ github.repository_owner }} # same on both GH + dockerhub
