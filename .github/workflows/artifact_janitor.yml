@@ -79,4 +79,5 @@ jobs:
           # so here we are deleting any tag that contains  `pr-82` in its name
           #
           #substrings: '["pr-${{ github.event.number }}"]'
-          substrings: '["0.0"]'
+          substrings:
+            - "0."
