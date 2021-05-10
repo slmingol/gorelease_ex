@@ -38,6 +38,7 @@ jobs:
           repo: ${{ github.repository_owner }}/gorelease_ex
           keep_latest: 3
           delete_tags: true
+          delete_tag_pattern: 0.
         env:
           GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
 
