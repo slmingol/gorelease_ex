@@ -47,57 +47,19 @@ dockers:
       - "--platform=linux/amd64"
 
 brews:
-  -
-    # Name template of the recipe
-    # Default to project name
-    name: gorelease_ex
-
-    # IDs of the archives to use.
-    # Defaults to all.
-    #ids:
-    #- foo
-    #- bar
-
-    # GOARM to specify which 32-bit arm version to use if there are multiple versions
-    # from the build section. Brew formulas support atm only one 32-bit version.
-    # Default is 6 for all artifacts or each id if there a multiple versions.
-    #goarm: 6
-
-    # NOTE: make sure the url_template, the token and given repo (github or gitlab) owner and name are from the
-    # same kind. We will probably unify this in the next major version like it is done with scoop.
-
-    # GitHub/GitLab repository to push the formula to
-    # Gitea is not supported yet, but the support coming
-    tap:
+  - tap:
       owner: slmingol
       name: homebrew-tap
-      # Optionally a token can be provided, if it differs from the token provided to GoReleaser
-      #token: "{{ .Env.GO_RELEASER_GITHUB_TOKEN }}"
-     
-    # Allows you to set a custom download strategy. Note that you'll need
-    # to implement the strategy and add it to your tap repository.
-    # Example: https://docs.brew.sh/Formula-Cookbook#specifying-the-download-strategy-explicitly
-    # Default is empty.
-    download_strategy: CurlDownloadStrategy.
-
-    # Allows you to add a custom require_relative at the top of the formula template
-    # Default is empty
-    custom_require: custom_download_strategy
-
-    # Git author used to commit to the repository.
-    # Defaults are shown.
+    folder: Formula
+    homepage: https://www.github.com/slmingol/gorlease_ex
+    description: "Software to create fast and easy drum rolls."
+    license: "MIT"
     commit_author:
       name: goreleaserbot
       email: goreleaser@lamolabs.org
-
-    # Folder inside the repository to put the formula.
-    # Default is the root folder.
-    folder: Formula
-
-    # Your app's description.
-    # Default is empty.
-    description: "Software to create fast and easy drum rolls."
-
-    # SPDX identifier of your app's license.
-    # Default is empty.
-    license: "MIT"
+    dependencies:
+      - name: go
+    test: |
+      system "#{bin}/gorelease_ex"
+    install: |
+      bin.install "gorelease_ex"
