@@ -50,7 +50,7 @@ brews:
   -
     # Name template of the recipe
     # Default to project name
-    name: myproject
+    name: gorelease_ex
 
     # IDs of the archives to use.
     # Defaults to all.
@@ -70,7 +70,7 @@ brews:
     # Gitea is not supported yet, but the support coming
     tap:
       owner: slmingol
-      name: gorelease_ex
+      name: homebrew-tap
       # Optionally a token can be provided, if it differs from the token provided to GoReleaser
       #token: "{{ .Env.GO_RELEASER_GITHUB_TOKEN }}"
      
