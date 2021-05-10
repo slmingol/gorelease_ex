@@ -63,3 +63,4 @@ brews:
       system "#{bin}/gorelease_ex"
     install: |
       bin.install "gorelease_ex"
+
