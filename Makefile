@@ -12,5 +12,6 @@ release:
 commit:
 	git add . ; git commit -m "Makefile commit" ; git push ; make tag
 
+
 ### Useful for debugging ###
 #goreleaser release --skip-validate --rm-dist --debug #--skip-publish
