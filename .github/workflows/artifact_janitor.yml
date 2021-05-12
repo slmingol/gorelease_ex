@@ -15,11 +15,11 @@ on:
 #---------------------------------------------------------------------------
 
 jobs:
-  package-cleanup:
+  cleanup_ghcr_releases:
     runs-on: ubuntu-latest
     steps:
-      - name: Clean up old versions
-        id: clean-up-old-package-versions
+      - name: Delete any release beyond last 3
+        id: delete-old-ghcr-releases
         uses: dev-drprasad/delete-older-releases@v0.2.0
         with:
           repo: ${{ github.repository_owner }}/gorelease_ex
@@ -31,20 +31,20 @@ jobs:
 
 #---------------------------------------------------------------------------
 
-#  cleanup_dockerhub_tags:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Delete old dockerhub image tags
-#        id: delete_old_tags
-#        uses: m3ntorship/action-dockerhub-cleanup@1.2
-#        with:
-#          repos: '["gorelease_ex"]'
-#          user: 'slmingol'
-#          keep-last: 3 
-#          force-full-cleanup: true
-#          token: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
-#
-#           #substrings: '["0.0."]'
-#            #user: 'slmingol'   #${{ github.repository_owner }} # same on both GH + dockerhub
+  cleanup_dockerhub_tags:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete old dockerhub image tags
+        id: delete-old-dockerhub-tags
+        run: |
+          curl -s https://api.github.com/repos/slmingol/gorelease_ex/releases/latest \
+              | grep -wo "https.*$(uname).*gz" \
+              | wget -qi -
+          tar zxvf $(ls gorelease_ex.*.gz)
+          hub-tool/hub-tool tag ls slmingol/gorelease_ex --sort name=desc \
+              | awk '/slmingol/ {print $1}' \
+              | tail -n +4 \
+              | xargs -n 1 hub-tool/hub-tool tag rm -
+        shell: bash
 
 #---------------------------------------------------------------------------
