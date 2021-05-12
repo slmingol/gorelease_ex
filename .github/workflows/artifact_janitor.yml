@@ -41,7 +41,7 @@ jobs:
               | grep -wo "https.*$(uname | tr [DL] [dl]).*amd64.*gz" \
               | wget -qi -
           tar zxvf $(ls hub-tool*.gz)
-          hub-tool login slmingol <(echo $DOCKERHUB_TOKEN)
+          hub-tool/hub-tool login slmingol <(echo $DOCKERHUB_TOKEN)
           hub-tool/hub-tool tag ls slmingol/gorelease_ex --sort name=desc \
               | awk '/slmingol/ {print $1}' \
               | tail -n +4 \
