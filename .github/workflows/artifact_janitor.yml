@@ -31,23 +31,23 @@ jobs:
 
 #---------------------------------------------------------------------------
 
-  cleanup_dockerhub_tags:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Delete old dockerhub image tags
-        id: delete-old-dockerhub-tags
-        run: |
-          curl -sL 'https://api.github.com/repos/docker/hub-tool/releases/latest' \
-              | grep -wo "https.*$(uname | tr [DL] [dl]).*amd64.*gz" \
-              | wget -qi -
-          tar zxvf $(ls hub-tool*.gz)
-          hub-tool/hub-tool login slmingol <(echo $DOCKERHUB_TOKEN)
-          hub-tool/hub-tool tag ls slmingol/gorelease_ex --sort name=desc \
-              | awk '/slmingol/ {print $1}' \
-              | tail -n +4 \
-              | xargs -n 1 hub-tool/hub-tool tag rm -
-        shell: bash
-        env:
-          DOCKERHUB_TOKEN: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
+#  cleanup_dockerhub_tags:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Delete old dockerhub image tags
+#        id: delete-old-dockerhub-tags
+#        run: |
+#          curl -sL 'https://api.github.com/repos/docker/hub-tool/releases/latest' \
+#              | grep -wo "https.*$(uname | tr [DL] [dl]).*amd64.*gz" \
+#              | wget -qi -
+#          tar zxvf $(ls hub-tool*.gz)
+#          hub-tool/hub-tool login slmingol <(echo $DOCKERHUB_TOKEN)
+#          hub-tool/hub-tool tag ls slmingol/gorelease_ex --sort name=desc \
+#              | awk '/slmingol/ {print $1}' \
+#              | tail -n +4 \
+#              | xargs -n 1 hub-tool/hub-tool tag rm -
+#        shell: bash
+#        env:
+#          DOCKERHUB_TOKEN: ${{ secrets.GO_RELEASER_DOCKERHUB_TOKEN }}
 
 #---------------------------------------------------------------------------
