@@ -7,8 +7,9 @@ The gorelease_ex project is an example repo that demonstrates tying several tech
 - Docker container packaging
 - GitHub Actions + Workflows
 - Brew packaging
-- ghcr.io
-- hub.docker.com lifecycle management
+- Releasing and lifecycle management around:
+  - ghcr.io
+  - hub.docker.com
 
 ### Background
 This repo is a WIP to build out goreleaser + GitHub Actions/Workflows which will accomplish the following things:
