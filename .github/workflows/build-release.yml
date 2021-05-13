@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    name: GoReleaser build ()gorelease_ex)
+    name: GoReleaser build
     runs-on: ubuntu-latest
 
     steps:
