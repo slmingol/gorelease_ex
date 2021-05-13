@@ -11,7 +11,7 @@ The gorelease_ex project is an example repo that demonstrates tying several tech
 - hub.docker.com lifecycle management
 
 ### Background
-This repo is a WIP to build out goreleaser + GitHub Actions which will accomplish the following things:
+This repo is a WIP to build out goreleaser + GitHub Actions/Workflows which will accomplish the following things:
 
 - Make use of [goreleaser](https://goreleaser.com/) to build artifacts - [here](https://github.com/slmingol/gorelease_ex/blob/main/.goreleaser.yml)
 - [Build, package, & release](https://github.com/slmingol/gorelease_ex/blob/main/.github/workflows/build-release.yml) Go applications using GitHub's [Release tab on this repo](https://github.com/slmingol/gorelease_ex/releases)
