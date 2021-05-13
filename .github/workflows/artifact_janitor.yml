@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
+        uses: mxschmitt/action-tmate@v3
 
       - name: Delete any release beyond last 3
         id: delete-old-ghcr-releases
