@@ -18,6 +18,9 @@ jobs:
   cleanup_ghcr_releases:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+
       - name: Delete any release beyond last 3
         id: delete-old-ghcr-releases
         uses: dev-drprasad/delete-older-releases@v0.2.0
