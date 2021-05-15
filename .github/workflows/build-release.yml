@@ -62,7 +62,7 @@ jobs:
           color: green
 
       - name: Get the Version Number
-        run: echo “::set-env name=SOURCE_TAG::$SOURCE_TAG”
+        run: echo "::set-env name=SOURCE_TAG::$SOURCE_TAG"
       - name: Create the Badge
         uses: schneegans/dynamic-badges-action@master
         with:
