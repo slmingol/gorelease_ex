@@ -1,6 +1,11 @@
 # gorelease_ex
 
-### TLDR
+## Statuses
+[![artifact-janitor](https://github.com/slmingol/gorelease_ex/actions/workflows/artifact-janitor.yml/badge.svg)](https://github.com/slmingol/gorelease_ex/actions/workflows/artifact-janitor.yml)
+[![build-release](https://github.com/slmingol/gorelease_ex/actions/workflows/build-release.yml/badge.svg)](https://github.com/slmingol/gorelease_ex/actions/workflows/build-release.yml)
+
+
+## TLDR
 The gorelease_ex project is an example repo that demonstrates tying several technologies and concepts together, mainly:
 
 - goreleaser
@@ -11,7 +16,8 @@ The gorelease_ex project is an example repo that demonstrates tying several tech
   - ghcr.io
   - hub.docker.com
 
-### Background
+
+## Background
 This repo is a WIP to build out goreleaser + GitHub Actions/Workflows which will accomplish the following things:
 
 - Make use of [goreleaser](https://goreleaser.com/) to build artifacts - [here](https://github.com/slmingol/gorelease_ex/blob/main/.goreleaser.yml)
@@ -21,24 +27,19 @@ This repo is a WIP to build out goreleaser + GitHub Actions/Workflows which will
 - Demonstrate how to do all this using just [goreleaser](https://goreleaser.com/) + GitHub workflows + actions
 - Build out a [janitor GitHub workflow](https://github.com/slmingol/gorelease_ex/blob/main/.github/workflows/artifact-janitor.yml) that'll "reap" old artifacts and containers from ghrc.io & hub.docker.com
 
-### Statuses
 
-[![artifact-janitor](https://github.com/slmingol/gorelease_ex/actions/workflows/artifact-janitor.yml/badge.svg)](https://github.com/slmingol/gorelease_ex/actions/workflows/artifact-janitor.yml)
-[![build-release](https://github.com/slmingol/gorelease_ex/actions/workflows/build-release.yml/badge.svg)](https://github.com/slmingol/gorelease_ex/actions/workflows/build-release.yml)
+## References
 
-
-### References
-
-#### GitHub Artifacts (packages + containers)
+### GitHub Artifacts (packages + containers)
 - https://docs.github.com/en/packages/learn-github-packages/viewing-packages
 - https://docs.github.com/en/packages
 
-#### GH Actions
+### GH Actions
 - https://github.com/marketplace/actions/debugging-with-tmate
 - https://github.com/marketplace/actions/docker-login
 - https://github.com/dev-drprasad/delete-older-releases
 
-#### Goreleaser
+### Goreleaser
 - https://goreleaser.com/customization/homebrew/
 - https://goreleaser.com/customization/build/
 - https://goreleaser.com/customization/docker/
