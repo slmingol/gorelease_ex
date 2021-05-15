@@ -40,6 +40,7 @@ This repo is a WIP to build out goreleaser + GitHub Actions/Workflows which will
 - https://github.com/marketplace/actions/debugging-with-tmate
 - https://github.com/marketplace/actions/docker-login
 - https://github.com/dev-drprasad/delete-older-releases
+- https://github.com/marketplace/actions/dynamic-badges
 
 ### Goreleaser
 - https://goreleaser.com/customization/homebrew/
