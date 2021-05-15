@@ -61,5 +61,17 @@ jobs:
           message: ${{ env.ANSWER }}
           color: green
 
+      - name: Get the Version Number
+        run: echo “::set-env name=SOURCE_TAG::$SOURCE_TAG”
+      - name: Create the Badge
+        uses: schneegans/dynamic-badges-action@master
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: 189c77409e1e73465aae3b2639d162ae
+          filename: answer.json
+          label: The Version is
+          message: ${{ env.SOURCE_TAG }}
+          color: green
+
 #---------------------------------------------------------------------------
 
