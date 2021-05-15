@@ -3,7 +3,7 @@
 ## Statuses
 [![artifact-janitor](https://github.com/slmingol/gorelease_ex/actions/workflows/artifact-janitor.yml/badge.svg)](https://github.com/slmingol/gorelease_ex/actions/workflows/artifact-janitor.yml)
 [![build-release](https://github.com/slmingol/gorelease_ex/actions/workflows/build-release.yml/badge.svg)](https://github.com/slmingol/gorelease_ex/actions/workflows/build-release.yml)
-![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/slmingol/189c77409e1e73465aae3b2639d162ae/raw/test.json)
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/slmingol/189c77409e1e73465aae3b2639d162ae/raw/answer.json)
 
 
 ## TLDR
