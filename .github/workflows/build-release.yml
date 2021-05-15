@@ -48,3 +48,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
 
 #---------------------------------------------------------------------------
+
+      - name: Get the Numbers
+        run: echo "ANSWER=42" >> $GITHUB_ENV
+      - name: Create the Badge
+        uses: schneegans/dynamic-badges-action@master
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: 189c77409e1e73465aae3b2639d162ae
+          filename: answer.json
+          label: The Answer is
+          message: ${{ env.ANSWER }}
+          color: green
+
+#---------------------------------------------------------------------------
+
