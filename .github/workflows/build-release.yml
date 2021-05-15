@@ -56,7 +56,7 @@ jobs:
         with:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: 189c77409e1e73465aae3b2639d162ae
-          filename: answer.json
+          filename: answer1.json
           label: The Answer is
           message: ${{ env.ANSWER }}
           color: green
@@ -68,7 +68,7 @@ jobs:
         with:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: 189c77409e1e73465aae3b2639d162ae
-          filename: answer.json
+          filename: answer2.json
           label: The Version is
           message: ${{ env.SOURCE_TAG }}
           color: green
