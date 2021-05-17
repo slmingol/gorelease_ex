@@ -4,7 +4,6 @@
 [![license](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 [![artifact-janitor](https://github.com/slmingol/gorelease_ex/actions/workflows/artifact-janitor.yml/badge.svg)](https://github.com/slmingol/gorelease_ex/actions/workflows/artifact-janitor.yml)
 [![build-release](https://github.com/slmingol/gorelease_ex/actions/workflows/build-release.yml/badge.svg)](https://github.com/slmingol/gorelease_ex/actions/workflows/build-release.yml)
-https://img.shields.io/github/v/tag/slmingol/gorelease_ex
 [![Tag](https://img.shields.io/github/v/tag/slmingol/gorelease_ex)](https://github.com/slmingol/gorelease_ex/tags)
 
 <!--
