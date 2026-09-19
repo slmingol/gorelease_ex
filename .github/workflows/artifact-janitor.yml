@@ -30,7 +30,7 @@ jobs:
 
       - name: Delete any release beyond last 3
         id: delete-old-ghcr-releases
-        uses: dev-drprasad/delete-older-releases@v0.2.0
+        uses: dev-drprasad/delete-older-releases@v0.3.4
         with:
           repo: ${{ github.repository_owner }}/gorelease_ex
           keep_latest: 2
