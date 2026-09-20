@@ -2,9 +2,10 @@
 
 ## Statuses
 [![license](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+[![release-please](https://github.com/slmingol/gorelease_ex/actions/workflows/release-please.yml/badge.svg)](https://github.com/slmingol/gorelease_ex/actions/workflows/release-please.yml)
 [![artifact-janitor](https://github.com/slmingol/gorelease_ex/actions/workflows/artifact-janitor.yml/badge.svg)](https://github.com/slmingol/gorelease_ex/actions/workflows/artifact-janitor.yml)
-[![build-release](https://github.com/slmingol/gorelease_ex/actions/workflows/build-release.yml/badge.svg)](https://github.com/slmingol/gorelease_ex/actions/workflows/build-release.yml)
-[![Tag](https://img.shields.io/github/v/tag/slmingol/gorelease_ex)](https://github.com/slmingol/gorelease_ex/tags)
+[![Release](https://img.shields.io/github/v/release/slmingol/gorelease_ex)](https://github.com/slmingol/gorelease_ex/releases/latest)
+[![homebrew](https://img.shields.io/badge/homebrew-slmingol%2Ftap%2Fgorelease__ex-orange)](https://github.com/slmingol/homebrew-tap)
 
 <!--
 ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/slmingol/189c77409e1e73465aae3b2639d162ae/raw/answer1.json)
