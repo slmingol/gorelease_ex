@@ -1,19 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="160" viewBox="0 0 800 160">
-  <defs>
-    <linearGradient id="grad-bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#161b22"/>
-    </linearGradient>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
-      <stop offset="0%" stop-color="#2ea44f"/>
-      <stop offset="100%" stop-color="#3fb950"/>
-    </linearGradient>
-  </defs>
-  <rect width="800" height="160" fill="url(#grad-bg)" rx="12"/>
-  <rect y="148" width="800" height="4" fill="url(#grad-accent)" rx="2"/>
+  <rect width="800" height="160" fill="#0d1117" rx="12"/>
+  <rect y="148" width="800" height="4" fill="#3fb950" rx="2"/>
   <!-- rocket icon -->
   <path d="M87 40 C87 40 110 40 117 63 L104 76 C104 76 102 63 87 60 Z" fill="none" stroke="#3fb950" stroke-width="2.5" stroke-linejoin="round"/>
-  <path d="M87 60 C87 60 74 63 72 76 L85 63 Z" fill="#3fb950" opacity="0.4"/>
+  <path d="M87 60 C87 60 74 63 72 76 L85 63 Z" fill="#3fb950" opacity="0.5"/>
   <circle cx="102" cy="57" r="4" fill="#3fb950"/>
   <path d="M72 76 L64 91 L79 83 Z" fill="#3fb950" opacity="0.6"/>
   <path d="M66 73 C62 77 62 85 66 87" fill="none" stroke="#3fb950" stroke-width="2" stroke-linecap="round"/>
