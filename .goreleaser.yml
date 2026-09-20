@@ -12,11 +12,13 @@ builds:
       - darwin
     goarch:
       - amd64
+      - arm64
 archives:
   - replacements:
       darwin: Darwin
       linux: Linux
       amd64: x86_64
+      arm64: arm64
 checksum:
   name_template: 'checksums.txt'
 snapshot:
@@ -46,22 +48,4 @@ dockers:
       - "--label=org.opencontainers.image.version={{ .Version }}"
       - "--platform=linux/amd64"
 
-brews:
-  - tap:
-      owner: slmingol
-      name: homebrew-tap
-    folder: Formula
-    homepage: https://www.github.com/slmingol/gorlease_ex
-    description: "Software to create fast and easy drum rolls."
-    license: "MIT"
-    commit_author:
-      name: goreleaserbot
-      email: goreleaser@lamolabs.org
-    dependencies:
-      - name: go
-      - name: coreutils
-    test: |
-      system "#{bin}/gorelease_ex"
-    install: |
-      bin.install "gorelease_ex"
 
