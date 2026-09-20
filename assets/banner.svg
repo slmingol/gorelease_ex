@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="160" viewBox="0 0 800 160">
+  <rect width="800" height="160" fill="#0d1117" rx="12"/>
+  <rect y="148" width="800" height="4" fill="#3fb950" rx="2"/>
+  <!-- rocket body (vertical capsule) -->
+  <path d="M80 22 C68 22 58 38 58 60 L58 96 L102 96 L102 60 C102 38 92 22 80 22 Z" fill="none" stroke="#3fb950" stroke-width="4"/>
+  <!-- rocket nose tip fill -->
+  <path d="M80 22 C68 22 58 38 58 60 L102 60 C102 38 92 22 80 22 Z" fill="#3fb950" opacity="0.15"/>
+  <!-- porthole window -->
+  <circle cx="80" cy="56" r="11" fill="none" stroke="#3fb950" stroke-width="3"/>
+  <circle cx="80" cy="56" r="5" fill="#3fb950" opacity="0.5"/>
+  <!-- left fin -->
+  <path d="M58 82 L42 106 L58 98 Z" fill="#3fb950" opacity="0.75"/>
+  <!-- right fin -->
+  <path d="M102 82 L118 106 L102 98 Z" fill="#3fb950" opacity="0.75"/>
+  <!-- flame outer -->
+  <ellipse cx="80" cy="110" rx="14" ry="18" fill="#3fb950" opacity="0.25"/>
+  <!-- flame inner -->
+  <ellipse cx="80" cy="113" rx="8" ry="12" fill="#3fb950" opacity="0.55"/>
+  <!-- text -->
+  <text x="150" y="72" font-family="sans-serif" font-size="46" font-weight="700" fill="white">gorelease_ex</text>
+  <text x="152" y="102" font-family="sans-serif" font-size="17" fill="#8b949e">GoReleaser + release-please + Homebrew -- reference impl</text>
+  <rect x="152" y="116" width="294" height="26" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="162" y="133" font-family="monospace" font-size="13" fill="#3fb950">brew install slmingol/tap/gorelease_ex</text>
+</svg>
