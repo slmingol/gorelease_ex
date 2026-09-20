@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.svg" alt="gorelease_ex banner" width="100%"/></p>
+
 # gorelease_ex
 
 ## Statuses
