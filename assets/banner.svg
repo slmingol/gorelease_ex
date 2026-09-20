@@ -1,29 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="160" viewBox="0 0 800 160">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d1117"/>
-      <stop offset="100%" style="stop-color:#161b22"/>
+    <linearGradient id="grad-bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#2ea44f"/>
-      <stop offset="100%" style="stop-color:#3fb950"/>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#2ea44f"/>
+      <stop offset="100%" stop-color="#3fb950"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="160" fill="url(#bg)" rx="12"/>
-  <rect y="148" width="800" height="4" fill="url(#accent)" rx="2"/>
+  <rect width="800" height="160" fill="url(#grad-bg)" rx="12"/>
+  <rect y="148" width="800" height="4" fill="url(#grad-accent)" rx="2"/>
   <!-- rocket icon -->
-  <g transform="translate(52,36)">
-    <path d="M35 5 C35 5 58 5 65 28 L52 41 C52 41 50 28 35 25 Z" fill="none" stroke="url(#accent)" stroke-width="2.5" stroke-linejoin="round"/>
-    <path d="M35 25 C35 25 22 28 20 41 L33 28 Z" fill="url(#accent)" opacity="0.4"/>
-    <circle cx="50" cy="22" r="4" fill="url(#accent)"/>
-    <path d="M20 41 L12 56 L27 48 Z" fill="url(#accent)" opacity="0.6"/>
-    <path d="M14 38 C10 42 10 50 14 52" fill="none" stroke="url(#accent)" stroke-width="2" stroke-linecap="round"/>
-  </g>
+  <path d="M87 40 C87 40 110 40 117 63 L104 76 C104 76 102 63 87 60 Z" fill="none" stroke="#3fb950" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M87 60 C87 60 74 63 72 76 L85 63 Z" fill="#3fb950" opacity="0.4"/>
+  <circle cx="102" cy="57" r="4" fill="#3fb950"/>
+  <path d="M72 76 L64 91 L79 83 Z" fill="#3fb950" opacity="0.6"/>
+  <path d="M66 73 C62 77 62 85 66 87" fill="none" stroke="#3fb950" stroke-width="2" stroke-linecap="round"/>
   <!-- title -->
-  <text x="150" y="72" font-family="'Segoe UI', system-ui, sans-serif" font-size="46" font-weight="700" fill="white">gorelease_ex</text>
+  <text x="150" y="72" font-family="sans-serif" font-size="46" font-weight="700" fill="white">gorelease_ex</text>
   <!-- subtitle -->
-  <text x="152" y="102" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" fill="#8b949e">GoReleaser + release-please + Homebrew tap &mdash; reference impl</text>
-  <!-- brew badge -->
-  <rect x="152" y="116" width="288" height="24" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-  <text x="162" y="132" font-family="'Courier New', monospace" font-size="13" fill="#3fb950">brew install slmingol/tap/gorelease_ex</text>
+  <text x="152" y="102" font-family="sans-serif" font-size="17" fill="#8b949e">GoReleaser + release-please + Homebrew &#8212; reference impl</text>
+  <!-- brew pill -->
+  <rect x="152" y="116" width="294" height="26" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="162" y="133" font-family="monospace" font-size="13" fill="#3fb950">brew install slmingol/tap/gorelease_ex</text>
 </svg>
