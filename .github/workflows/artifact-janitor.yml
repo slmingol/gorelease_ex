@@ -22,6 +22,8 @@ on:
 jobs:
   cleanup_ghcr_releases:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       # Enable tmate debugging of manually-triggered workflows if the input option was provided
       - name: Setup tmate session
@@ -37,7 +39,7 @@ jobs:
           delete_tags: true
           delete_tag_pattern: 0.
         env:
-          GITHUB_TOKEN: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 #---------------------------------------------------------------------------
 
